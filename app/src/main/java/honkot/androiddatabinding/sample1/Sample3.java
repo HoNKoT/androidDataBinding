@@ -12,10 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import honkot.androiddatabinding.R;
-import honkot.androiddatabinding.databinding.Sample2inflaterBinding;
 import honkot.androiddatabinding.databinding.Sample3inflaterBinding;
 
 public class Sample3 extends AppCompatActivity {
