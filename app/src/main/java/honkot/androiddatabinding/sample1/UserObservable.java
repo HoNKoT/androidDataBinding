@@ -2,6 +2,7 @@ package honkot.androiddatabinding.sample1;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.view.View;
 
 import com.android.databinding.library.baseAdapters.BR;
 
@@ -41,5 +42,11 @@ public class UserObservable extends BaseObservable {
         this.Nickname = value;
         // You cannot use notifyPropertyChanged since the variable does not have @Bindable
 //        notifyPropertyChanged(BR.Nickname);
+    }
+
+    public void putName(View view) {
+        setFirstName("Hiroki");
+        setLastName("Honda");
+        setNickname("Hondy");
     }
 }
