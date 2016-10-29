@@ -5,8 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import honkot.androiddatabinding.sample1.Sample1;
-import honkot.androiddatabinding.sample1.Sample2;
+import honkot.androiddatabinding.sample1.*;
 
 public class TopActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,6 +16,7 @@ public class TopActivity extends AppCompatActivity implements View.OnClickListen
 
         findViewById(R.id.sample1_1).setOnClickListener(this);
         findViewById(R.id.sample1_2).setOnClickListener(this);
+        findViewById(R.id.sample1_3).setOnClickListener(this);
     }
 
     @Override
@@ -25,6 +25,7 @@ public class TopActivity extends AppCompatActivity implements View.OnClickListen
         switch (view.getId()) {
             case R.id.sample1_1: intent.setClass(this, Sample1.class); break;
             case R.id.sample1_2: intent.setClass(this, Sample2.class); break;
+            case R.id.sample1_3: intent.setClass(this, Sample3.class); break;
             default:
                 return;
         }
