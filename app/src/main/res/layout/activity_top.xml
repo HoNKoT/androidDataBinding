@@ -11,8 +11,15 @@
     tools:context="honkot.androiddatabinding.TopActivity">
 
     <Button
-        android:id="@+id/sample1"
+        android:id="@+id/sample1_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sample1" />
+        android:text="Sample1-1" />
+
+    <Button
+        android:text="Sample1-2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sample1_1"
+        android:id="@+id/sample1_2" />
 </RelativeLayout>
