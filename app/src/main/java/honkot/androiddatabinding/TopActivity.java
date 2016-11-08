@@ -18,6 +18,7 @@ public class TopActivity extends AppCompatActivity implements View.OnClickListen
         findViewById(R.id.sample1_2).setOnClickListener(this);
         findViewById(R.id.sample1_3).setOnClickListener(this);
         findViewById(R.id.sample1_4).setOnClickListener(this);
+        findViewById(R.id.sample1_5).setOnClickListener(this);
     }
 
     @Override
@@ -28,6 +29,7 @@ public class TopActivity extends AppCompatActivity implements View.OnClickListen
             case R.id.sample1_2: intent.setClass(this, Sample2.class); break;
             case R.id.sample1_3: intent.setClass(this, Sample3.class); break;
             case R.id.sample1_4: intent.setClass(this, Sample4.class); break;
+            case R.id.sample1_5: intent.setClass(this, Sample5.class); break;
             default:
                 return;
         }

@@ -36,4 +36,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/sample1_3"
         android:id="@+id/sample1_4" />
+
+    <Button
+        android:text="Sample1-5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sample1_4"
+        android:id="@+id/sample1_5" />
 </RelativeLayout>
