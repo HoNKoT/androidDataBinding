@@ -2,6 +2,7 @@ package honkot.androiddatabinding.sample1;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.databinding.ObservableBoolean;
 import android.databinding.ObservableInt;
 import android.util.Log;
 
@@ -17,6 +18,8 @@ public class UserInput extends BaseObservable {
     private ObservableInt radioGroup = new ObservableInt();
     @Bindable
     private String editText = "";
+    @Bindable
+    private ObservableBoolean checkBox  = new ObservableBoolean();
 
     public UserInput() {
         // initialize
@@ -31,6 +34,9 @@ public class UserInput extends BaseObservable {
     }
     public String getEditText() { return editText;}
     public void setEditText(String value) { this.editText = value;}
+    public ObservableBoolean getCheckBox() {
+        return this.checkBox;
+    }
 
     public void dump() {
         StringBuffer buf = new StringBuffer();
@@ -44,6 +50,10 @@ public class UserInput extends BaseObservable {
         buf.append(System.getProperty("line.separator"));
         buf.append("EditText:'");
         buf.append(editText);
+        buf.append("'");
+        buf.append(System.getProperty("line.separator"));
+        buf.append("CheckBox:'");
+        buf.append(checkBox.get());
         buf.append("'");
         Log.i("InputUser", buf.toString());
     }

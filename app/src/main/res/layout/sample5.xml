@@ -47,6 +47,11 @@
                             android:layout_height="wrap_content"/>
                     </RadioGroup>
                 </LinearLayout>
+                <CheckBox
+                    android:text="CheckBox A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="@={input.checkBox}"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
