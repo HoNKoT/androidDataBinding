@@ -11,7 +11,6 @@ import honkot.androiddatabinding.databinding.Sample5Binding;
 
 public class Sample5 extends AppCompatActivity {
 
-    private final String TAG = "Sample 1-5";
     UserInput mInput;
 
     @Override
@@ -24,21 +23,8 @@ public class Sample5 extends AppCompatActivity {
         bind.dump.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dump();
+                mInput.dump();
             }
         });
-    }
-
-    private void dump() {
-        StringBuffer buf = new StringBuffer();
-        buf.append("RadioGroup:'Radio ");
-        switch (mInput.getRadioGroup().get()) {
-            case R.id.radioA: buf.append("A"); break;
-            case R.id.radioB: buf.append("B"); break;
-            default: buf.append("UNKNOWN"); break;
-        }
-        buf.append("'");
-//        buf.append(System.getProperty("line.separator"));
-        Log.i(TAG, buf.toString());
     }
 }

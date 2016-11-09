@@ -3,6 +3,7 @@ package honkot.androiddatabinding.sample1;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.databinding.ObservableInt;
+import android.util.Log;
 
 import honkot.androiddatabinding.BR;
 import honkot.androiddatabinding.R;
@@ -14,6 +15,8 @@ public class UserInput extends BaseObservable {
 
     @Bindable
     private ObservableInt radioGroup = new ObservableInt();
+    @Bindable
+    private String editText = "";
 
     public UserInput() {
         // initialize
@@ -25,5 +28,23 @@ public class UserInput extends BaseObservable {
     public void setRadioGroup(ObservableInt value) {
         radioGroup = value;
         notifyPropertyChanged(BR.radioGroup);
+    }
+    public String getEditText() { return editText;}
+    public void setEditText(String value) { this.editText = value;}
+
+    public void dump() {
+        StringBuffer buf = new StringBuffer();
+        buf.append("RadioGroup:'Radio ");
+        switch (radioGroup.get()) {
+            case R.id.radioA: buf.append("A"); break;
+            case R.id.radioB: buf.append("B"); break;
+            default: buf.append("UNKNOWN"); break;
+        }
+        buf.append("'");
+        buf.append(System.getProperty("line.separator"));
+        buf.append("EditText:'");
+        buf.append(editText);
+        buf.append("'");
+        Log.i("InputUser", buf.toString());
     }
 }

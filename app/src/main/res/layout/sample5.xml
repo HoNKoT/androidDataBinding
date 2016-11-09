@@ -13,26 +13,41 @@
             android:text="dump to log"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <RadioGroup
-                android:id="@+id/radioG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkedButton="@={input.radioGroup}">
-                <RadioButton
-                    android:id="@+id/radioA"
-                    android:text="Radio A"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <RadioButton
-                    android:id="@+id/radioB"
-                    android:text="Radio B"
+                    android:layout_height="wrap_content"
+                    android:hint="(^ω^)"
+                    android:text="@={input.editText}" />
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </RadioGroup>
-        </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/radioG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@={input.radioGroup}">
+                        <RadioButton
+                            android:id="@+id/radioA"
+                            android:text="Radio A"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <RadioButton
+                            android:id="@+id/radioB"
+                            android:text="Radio B"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </layout>
