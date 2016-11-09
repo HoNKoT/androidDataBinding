@@ -20,6 +20,8 @@ public class UserInput extends BaseObservable {
     private String editText = "";
     @Bindable
     private ObservableBoolean checkBox  = new ObservableBoolean();
+    @Bindable
+    private ObservableBoolean toggleButton  = new ObservableBoolean();
 
     public UserInput() {
         // initialize
@@ -36,6 +38,9 @@ public class UserInput extends BaseObservable {
     public void setEditText(String value) { this.editText = value;}
     public ObservableBoolean getCheckBox() {
         return this.checkBox;
+    }
+    public ObservableBoolean getToggleButton() {
+        return this.toggleButton;
     }
 
     public void dump() {
@@ -55,6 +60,11 @@ public class UserInput extends BaseObservable {
         buf.append("CheckBox:'");
         buf.append(checkBox.get());
         buf.append("'");
+        buf.append(System.getProperty("line.separator"));
+        buf.append("ToggleButton:'");
+        buf.append(toggleButton.get());
+        buf.append("'");
+
         Log.i("InputUser", buf.toString());
     }
 }
