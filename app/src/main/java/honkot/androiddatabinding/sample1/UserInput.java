@@ -22,6 +22,8 @@ public class UserInput extends BaseObservable {
     private ObservableBoolean checkBox  = new ObservableBoolean();
     @Bindable
     private ObservableBoolean toggleButton  = new ObservableBoolean();
+    @Bindable
+    private ObservableInt seekBar = new ObservableInt();
 
     public UserInput() {
         // initialize
@@ -41,6 +43,9 @@ public class UserInput extends BaseObservable {
     }
     public ObservableBoolean getToggleButton() {
         return this.toggleButton;
+    }
+    public ObservableInt getSeekBar() {
+        return this.seekBar;
     }
 
     public void dump() {
@@ -63,6 +68,10 @@ public class UserInput extends BaseObservable {
         buf.append(System.getProperty("line.separator"));
         buf.append("ToggleButton:'");
         buf.append(toggleButton.get());
+        buf.append("'");
+        buf.append(System.getProperty("line.separator"));
+        buf.append("SeekBar:'");
+        buf.append(seekBar.get());
         buf.append("'");
 
         Log.i("InputUser", buf.toString());
