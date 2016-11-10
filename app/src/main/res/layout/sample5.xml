@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <!--Here is our data class.-->
         <variable name="input" type="honkot.androiddatabinding.sample1.UserInput"/>
+        <variable name="spinnerAdapter" type="android.widget.ArrayAdapter"/>
     </data>
     <LinearLayout
         android:orientation="vertical"
@@ -61,6 +63,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:progress="@={input.seekBar}" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner"
+                    app:adapter="@{spinnerAdapter}"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

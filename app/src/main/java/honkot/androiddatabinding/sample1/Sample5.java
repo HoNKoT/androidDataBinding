@@ -3,8 +3,8 @@ package honkot.androiddatabinding.sample1;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 
 import honkot.androiddatabinding.R;
 import honkot.androiddatabinding.databinding.Sample5Binding;
@@ -26,5 +26,11 @@ public class Sample5 extends AppCompatActivity {
                 mInput.dump();
             }
         });
+
+        String[] array = new String[] {
+                "Apple", "Grape", "Pencil"
+        };
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, array);
+        bind.setSpinnerAdapter(adapter);
     }
 }
